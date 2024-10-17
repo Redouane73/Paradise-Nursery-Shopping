@@ -9,3 +9,36 @@
   .aboutus-container .special {
     padding-left: 6rem;
   }
+
+  @media (max-width: 576px) {
+    .aboutus-container {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .aboutus-container .special {
+      padding-left: 3rem;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    .aboutus-container {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .aboutus-container .special {
+      padding-left: 4.5rem;
+    }
+
+  }
+
+  @media (min-width: 768px) and (max-width: 992px){
+    .aboutus-container {
+      font-size: 1.25rem;
+    }
+    .aboutus-container .special {
+      padding-left: 6.875rem;
+      font-weight: 600;
+    }
+  }
+
+
