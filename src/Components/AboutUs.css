@@ -1,0 +1,11 @@
+.aboutus-container {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: justify;
+  }
+
+  .aboutus-container .special {
+    padding-left: 6rem;
+  }

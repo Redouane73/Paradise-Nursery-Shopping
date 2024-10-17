@@ -1,0 +1,114 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 0.5rem;
+}
+
+.company-logo .logo img {
+    border-radius: 50%;
+}
+
+.company-logo {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.main-container {
+    display: flex;
+}
+
+.items-information {
+    margin-top: 50px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.product-container {
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.plant-cat {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
+    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    
+    gap: 20px;
+}
+
+/* Pseudo-classes - Hover effect on product button */
+.product-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-cost {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: 200px; /* Adjust height for better consistency */
+}
+
+.product-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.product-button:hover {
+    background-color: #45a049;
+}
+
+.product-card::before {
+    content: "SALE";
+    background-color: #e74c3c;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    border-radius: 0 0 0 5px;
+}
+

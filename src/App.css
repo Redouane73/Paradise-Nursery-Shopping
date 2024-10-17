@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .app-container {
+    display: flex;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2017/07/13/08/59/greenhouse-2499758_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    /* position: relative; */
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .app-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
   }
+
+  .app-container h1 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .landing-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    gap: 6.25rem;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .right-sec {
+    width: 50rem;
+    color: white;
+    /* background-color: rgba(0,0,0,0.1); */
+  }
+
+  .left-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+    width: 31.25rem;
+  }
+
+  .left-sec h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .left-sec h1 span {
+    display: block;
+  }
+
+  .left-sec .green-line {
+    width: 2rem;
+    height: 2px;
+    background-color: #4caf50;
+  }
+
+  .get-started-btn {
+    background-color:#4caf50;
+    /* color: white; */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .get-started-btn:hover {
+    background-color: #5aa25c;
+  }
+
+  
+.product-list-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.685);
+  transition: top 0.5s ease;
+  overflow-y: auto;
+  z-index: 2;
+  backdrop-filter: blur(5px);
 }
 
-.card {
-  padding: 2em;
+.product-list-container.visible {
+  top: 0;
 }
 
-.read-the-docs {
-  color: #888;
-}
